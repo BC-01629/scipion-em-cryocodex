@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scipion-em-cryocodex"
+version = "0.3.2"
+description = "CryoCodex map enhancement, local quality estimation and molecular masks for Scipion"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [{name = "Bin Cheng, Yang Lab"}]
+dependencies = ["scipion-em>=3.8", "mrcfile>=1.4,<2"]
+keywords = ["scipion", "scipion-3.0", "cryoem", "cryocodex"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[project.urls]
+"CryoCodex source" = "https://github.com/YangLab-SDU/CryoCodex"
+
+[project.entry-points."pyworkflow.plugin"]
+cryocodex = "cryocodex"
+
+[tool.setuptools.packages.find]
+include = ["cryocodex*"]
+
+[tool.setuptools.package-data]
+cryocodex = ["protocols.conf"]

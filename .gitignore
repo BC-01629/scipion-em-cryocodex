@@ -1,0 +1,26 @@
+# Python and packaging
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local environments, editors and development notes
+.venv/
+.venv-*/
+venv/
+.local/
+.idea/
+.vscode/
+.DS_Store
+*.log
+
+# Local credentials and environment configuration
+.env
+.env.*
+!.env.example
+.pypirc

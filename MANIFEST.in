@@ -1,0 +1,4 @@
+include LICENSE README.md CHANGELOG.md
+exclude DEVELOPMENT.md
+recursive-include cryocodex *.py *.conf
+global-exclude *.py[cod]
